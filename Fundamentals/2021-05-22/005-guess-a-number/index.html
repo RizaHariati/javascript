@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Guess a number</h1>
+    </header>
+    <main>
+      <form onsubmit="compare(event)" class="container">
+        <div class="input">
+          <label for="guess">please write a number from 0 to 10</label>
+          <input type="text" name="guess" id="guess" autofocus />
+          <button>submit</button>
+        </div>
+        <div class="output">
+          <label for="result">computer says :</label>
+          <input type="text" name="result" id="result" />
+        </div>
+        <div>
+          <h3 id="verdict"></h3>
+        </div>
+      </form>
+    </main>
+    <script src="./005-guess-a-number.js"></script>
+  </body>
+</html>
