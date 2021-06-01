@@ -1,9 +1,9 @@
 :root {
-  --primary-color: #457b9d;
-  --primary-dark: #1d3557;
-  --primary-light: #f1faee;
-  --primary-medium: #a8dadc;
-  --accent: #e63946;
+  --primary-color: #606c38;
+  --primary-dark: #283618;
+  --primary-light: #fefae0;
+  --primary-medium: #dda15e;
+  --accent: #bc6c25;
   --primary-font: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
     sans-serif;
 }
@@ -83,7 +83,6 @@ body {
   height: 280px;
   width: 90%;
   max-width: 600px;
-  overflow: hidden;
 }
 
 .slide-container .slide {
@@ -122,6 +121,9 @@ body {
 .slide .name {
   font-size: 1.5rem;
   color: var(--accent);
+}
+.slide .title {
+  color: var(--primary-light);
 }
 
 .slide .job-desc {

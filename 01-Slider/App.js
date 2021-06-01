@@ -15,7 +15,7 @@ container.innerHTML = people
       position = "last";
     }
 
-    return `<div class="slide ${position}">
+    return `<div class="slide ${position} ">
             <img src=${img} alt=${name} />
             <h3 class="name">${name}</h3>
             <p class="title">${job}</p>
@@ -26,28 +26,28 @@ container.innerHTML = people
   })
   .join("");
 
-const startSlider = (type) => {
+const sliderTool = (type) => {
   const active = document.querySelector(".active");
   const last = document.querySelector(".last");
   let nextSlide = active.nextElementSibling;
   if (!nextSlide) {
     nextSlide = container.firstElementChild;
   }
-
   active.classList.remove(["active"]);
   last.classList.remove(["last"]);
   nextSlide.classList.remove(["next"]);
 
-  if (type == "prev") {
+  if (type === "prev") {
     last.classList.add("active");
     active.classList.add("next");
-    nextSlide.classList.add(["next"]);
+    nextSlide.classList.add("next");
     nextSlide = last.previousElementSibling;
+
     if (!nextSlide) {
       nextSlide = container.lastElementChild;
     }
-    nextSlide.classList.add("last");
     nextSlide.classList.remove(["next"]);
+    nextSlide.classList.add(["last"]);
     return;
   }
 
@@ -57,9 +57,9 @@ const startSlider = (type) => {
 };
 
 nextBtn.addEventListener("click", () => {
-  startSlider("prev");
+  sliderTool("prev");
 });
 
 prevBtn.addEventListener("click", () => {
-  startSlider();
+  sliderTool("");
 });
