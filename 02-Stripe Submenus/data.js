@@ -1,37 +1,36 @@
 const sublinks = [
   {
-    page: "About",
+    page: "Franchise",
     links: [
-      { label: "Our Team", icon: "fas fa-users", url: "#" },
-      { label: "Community", icon: "fas fa-people-carry", url: "#" },
-      { label: "Member", icon: "fas fa-user-edit", url: "#" },
-      { label: "Hiring", icon: "fas fa-user-plus", url: "#" },
+      { label: "No.5", icon: "fas fa-users", url: "#" },
+      { label: "Coco Mademoiselle", icon: "fas fa-people-carry", url: "#" },
+      { label: "Gabrielle Chanel", icon: "fas fa-user-edit", url: "#" },
+      { label: "Chance", icon: "fas fa-user-plus", url: "#" },
     ],
   },
   {
-    page: "Resources",
+    page: "Categories",
     links: [
-      { label: "Newsletter", icon: "fas fa-newspaper", url: "#" },
-      { label: "Videos", icon: "fas fa-photo-video", url: "#" },
-      { label: "Tutorials", icon: "fas fa-chalkboard-teacher", url: "#" },
-      { label: "Podcast", icon: "fas fa-podcast", url: "#" },
+      { label: "Eau de Parfum", icon: "fas fa-newspaper", url: "#" },
+      { label: "Eau de Toilette", icon: "fas fa-photo-video", url: "#" },
     ],
   },
   {
-    page: "Online Classes",
+    page: "Scent Family",
     links: [
-      { label: "Design", icon: "fas fa-fan", url: "#" },
-      { label: "Business", icon: "fas fa-building", url: "#" },
-      { label: "Growing", icon: "fas fa-chart-line", url: "#" },
+      { label: "Aromatic", icon: "fas fa-fan", url: "#" },
+      { label: "Citrus", icon: "fas fa-building", url: "#" },
+      { label: "Green", icon: "fas fa-chart-line", url: "#" },
       { label: "Gift", icon: "fas fa-gift", url: "#" },
       { label: "Redeem", icon: "fas fa-hand-holding-medical", url: "#" },
     ],
   },
   {
-    page: "Live Events",
+    page: "Format",
     links: [
-      { label: "Conference", icon: "fas fa-broadcast-tower", url: "#" },
-      { label: "Workshop", icon: "fas fa-dolly", url: "#" },
+      { label: "Spray", icon: "fas fa-broadcast-tower", url: "#" },
+      { label: "Travel Size", icon: "fas fa-dolly", url: "#" },
+      { label: "Sets", icon: "fas fa-dolly", url: "#" },
     ],
   },
 ];
