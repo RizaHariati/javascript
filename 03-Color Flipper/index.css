@@ -1,0 +1,127 @@
+:root {
+  --primary-dark: #403d39;
+  --primary-medium: #ccc5b9;
+  --primary-light: #fffcf2;
+  --accent: #eb5e28;
+  --primary-font: "Lucida Sans";
+  --shadow: 0px 2px 8px 0 var(--primary-dark);
+  --transition: all 0.4s ease-in;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: var(--primary-font);
+}
+
+body {
+  background-color: var(--primary-light);
+  position: relative;
+}
+
+.nav-container {
+  height: 4rem;
+  width: 100%;
+  background-color: white;
+  -webkit-box-shadow: var(--shadow);
+  box-shadow: var(--shadow);
+  line-height: 4rem;
+  z-index: 1;
+}
+
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 60%;
+  margin: auto;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.navbar .logo {
+  color: var(--accent);
+  font-size: 2rem;
+  font-variant: small-caps;
+}
+
+.linkBtn {
+  border: transparent;
+  font-size: 1.2rem;
+  background-color: transparent;
+  width: 130px;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.linkBtn:hover {
+  color: var(--accent);
+}
+
+.main {
+  position: absolute;
+  background-color: transparent;
+  width: 100%;
+  height: calc(100vh - 4rem);
+  z-index: -1;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.banner {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.color {
+  background-color: var(--primary-dark);
+  color: var(--primary-light);
+  padding: 1rem;
+  border-radius: 0.75rem;
+}
+
+.color h2 {
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+.color h2 span {
+  color: var(--accent);
+}
+
+.btn {
+  background-color: transparent;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 0.3rem 1rem;
+  margin-top: 1rem;
+  border-radius: 0.75rem;
+  border: 2px solid var(--primary-dark);
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.btn:hover {
+  color: #eb5e28;
+  background-color: var(--primary-dark);
+}
+/*# sourceMappingURL=styles.css.map */
