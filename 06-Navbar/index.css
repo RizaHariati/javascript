@@ -1,0 +1,198 @@
+:root {
+  --accent: #d77a61;
+  --primary-dark: #223843;
+  --primary-light: #eff1f3;
+  --primary-medium: #d8b4a0;
+  --secondary-light: white;
+  --box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.445);
+  --primary-font: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+    sans-serif;
+  --transition: all 0.3s ease-in;
+}
+
+*,
+::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  font-family: var(--primary-font);
+  color: var(--primary-dark);
+  width: 100%;
+  height: 100vh;
+  background-color: var(--primary-light);
+  z-index: -3;
+}
+
+.navbar-container {
+  position: relative;
+  background-color: var(--secondary-light);
+  height: 4rem;
+  line-height: 4rem;
+  width: 100%;
+  -webkit-box-shadow: var(--box-shadow);
+  box-shadow: var(--box-shadow);
+  z-index: 4;
+}
+
+.navbar {
+  width: 90%;
+  height: 100%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.toggle {
+  display: none;
+}
+
+.nav-header h2 {
+  font-size: 2rem;
+  font-variant: small-caps;
+}
+
+.nav-header h2 span {
+  color: var(--accent);
+}
+
+.nav-links {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.linkBtn {
+  color: var(--primary-dark);
+}
+
+.linkBtn:hover {
+  color: var(--accent);
+}
+
+.socmedBtn {
+  font-size: 1.3rem;
+  color: var(--accent);
+  opacity: 1;
+  padding: 0 0.2rem;
+}
+
+.socmedBtn:hover {
+  opacity: 0.7;
+}
+
+.dropdown-menu {
+  position: absolute;
+  display: none;
+}
+
+.btn {
+  border: transparent;
+  background: transparent;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 700px) {
+  .nav-links {
+    display: none;
+  }
+  .socmed {
+    display: none;
+  }
+  .nav-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: auto;
+    width: 100%;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .toggle {
+    display: block;
+    color: var(--accent);
+    background-color: transparent;
+    border: transparent;
+    font-size: 1.5rem;
+    -webkit-transform: rotateZ(0deg);
+    transform: rotateZ(0deg);
+    -webkit-transition: var(--transition);
+    transition: var(--transition);
+  }
+  .toggle:hover {
+    -webkit-transform: rotateZ(90deg);
+    transform: rotateZ(90deg);
+    color: var(--primary-dark);
+  }
+  .dropdown-menu {
+    position: absolute;
+    visibility: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    z-index: 0;
+    width: 100%;
+    background-color: var(--secondary-light);
+    top: -14rem;
+    left: 0;
+    line-height: 1.6rem;
+    height: 10rem;
+    -webkit-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    -webkit-box-shadow: var(--box-shadow);
+    box-shadow: var(--box-shadow);
+  }
+  .dropdown-menu.show {
+    z-index: 0;
+    top: 4rem;
+    visibility: visible;
+  }
+  .dropdownBtn {
+    width: 100%;
+    color: var(--primary-dark);
+    font-size: 1.2rem;
+    line-height: 2rem;
+    text-align: left;
+    margin: 0.1rem 0;
+    padding: 0 5%;
+    background-color: transparent;
+  }
+  .dropdownBtn:hover {
+    padding: 0 7%;
+    background-color: var(--primary-medium);
+    opacity: 0.8;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
