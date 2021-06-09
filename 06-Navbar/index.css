@@ -165,34 +165,37 @@ body {
     z-index: 0;
     width: 100%;
     background-color: var(--secondary-light);
-    top: -14rem;
+    top: 4rem;
     left: 0;
-    line-height: 1.6rem;
-    height: 10rem;
+    height: 0rem;
     -webkit-transition: all 1s ease-in-out;
     transition: all 1s ease-in-out;
     -webkit-box-shadow: var(--box-shadow);
     box-shadow: var(--box-shadow);
+    overflow: hidden;
   }
   .dropdown-menu.show {
-    z-index: 0;
     top: 4rem;
+    height: 11rem;
     visibility: visible;
   }
   .dropdownBtn {
+    display: block;
     width: 100%;
-    color: var(--primary-dark);
-    font-size: 1.2rem;
-    line-height: 2rem;
-    text-align: left;
-    margin: 0.1rem 0;
-    padding: 0 5%;
     background-color: transparent;
+    margin: 0.1rem 0;
+    font-size: 1.2rem;
+    line-height: 2.5rem;
+    height: auto;
+    text-align: left;
+    padding-left: 1rem;
+    -webkit-transition: var(--transition);
+    transition: var(--transition);
   }
   .dropdownBtn:hover {
-    padding: 0 7%;
     background-color: var(--primary-medium);
     opacity: 0.8;
+    padding-left: 2rem;
   }
 }
 /*# sourceMappingURL=styles.css.map */
