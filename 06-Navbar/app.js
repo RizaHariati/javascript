@@ -32,9 +32,10 @@ dropdown.innerHTML = `
         `;
 
 toggleBtn.addEventListener("click", () => {
-  if (dropdown.classList.contains("show")) {
-    dropdown.classList.remove("show");
-  } else {
-    dropdown.classList.add("show");
-  }
+  // if (!dropdown.classList.contains("show")) {
+  //   dropdown.classList.add("show");
+  // } else {
+  //   dropdown.classList.remove("show");
+  // }
+  dropdown.classList.toggle("show");
 });
