@@ -17,47 +17,65 @@
     <title>Scroll</title>
   </head>
   <body>
-    <nav class="nav-container">
-      <div class="navbar">
-        <div class="nav-header">
-          <div class="logo">
-            <img src="./img/animal-2023924_640.png" alt="logo" />
+    <header id="home">
+      <nav id="nav">
+        <div class="nav-center">
+          <div class="nav-header">
+            <img src="./img/animal-2023924_640.png" class="logo" alt="logo" />
+            <button class="nav-toggle">
+              <i class="fa fa-bars"></i>
+            </button>
           </div>
-          <button class="nav-icon">
-            <i class="fa fa-bars" aria-hidden="true"></i>
-          </button>
+          <div class="links-container">
+            <ul class="links">
+              <li><a href="#home" class="scroll-link">Home</a></li>
+              <li><a href="#about" class="scroll-link">About</a></li>
+              <li><a href="#services" class="scroll-link">Services</a></li>
+              <li><a href="#tours" class="scroll-link">Tours</a></li>
+            </ul>
+          </div>
         </div>
-        <div class="nav-links">
-          <button class="btn link-btn">Home</button>
-          <button class="btn link-btn">About</button>
-          <button class="btn link-btn">Services</button>
-          <button class="btn link-btn">Tours</button>
-        </div>
-      </div>
-    </nav>
-    <div class="main-container">
-      <div class="home">
-        <div class="info">
-          <h1 class="mainTitle">Wonderful Indonesia</h1>
-          <p class="text">
+      </nav>
+      <div class="banner">
+        <div class="container">
+          <h1>Wonderful Indonesia</h1>
+          <p>
             Catch a glimpse of Indonesia's bewitching attractions without having
             to put on your shoes and discover the ultimate destination that
             matches your soul.
           </p>
-          <button class="home-btn">Explore Tours</button>
+          <a href="#tours" class="scroll-link btn btn-white">Explore Tours</a>
         </div>
       </div>
-      <div class="page about">
-        <h1 class="title">About <span>Us</span></h1>
+    </header>
+    <section id="about" class="section">
+      <div class="title">
+        <h2>About <span>Us</span></h2>
       </div>
-      <div class="page services">
-        <h1 class="title">Our <span>Services</span></h1>
-      </div>
-      <div class="page tours">
-        <h1 class="title">Featured <span>Tours</span></h1>
-      </div>
-    </div>
+    </section>
 
+    <section id="services" class="section">
+      <div class="title">
+        <h2>Our <span>Services</span></h2>
+      </div>
+    </section>
+
+    <section id="tours" class="section">
+      <div class="title">
+        <h2>Featured <span>Tours</span></h2>
+      </div>
+    </section>
+
+    <footer class="section">
+      <p>
+        copyright &copy : backroad travel tours company
+        <span class="date"> 2020 </span>
+        .all rights reserved
+      </p>
+    </footer>
+    <a href="#home" class="scroll-link top-link">
+      <i class="fas fa-arrow-up"></i>
+    </a>
     <script type="module" src="./app.js"></script>
   </body>
 </html>
