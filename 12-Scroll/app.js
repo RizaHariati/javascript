@@ -1,61 +1,67 @@
+// --date--
+
 const date = document.querySelector(".date");
+
+const newDate = new Date().getFullYear();
+date.textContent = newDate;
+
+// --toggle--
+
+const container = document.querySelector(".links-container");
 const toggleBtn = document.querySelector(".nav-toggle");
-const linksContainer = document.querySelector(".links-container");
 const links = document.querySelector(".links");
-const scrollLinks = document.querySelectorAll(".scroll-link");
-const nav = document.getElementById("nav");
-const topLink = document.querySelector(".top-link");
 
-const yearToday = new Date();
-date.textContent = yearToday.getFullYear();
-
-toggleBtn.addEventListener("click", () => {
-  linksContainer.classList.toggle("show-links");
-  const containerHeight = linksContainer.getBoundingClientRect().height;
-  const linksHeight = links.getBoundingClientRect().height;
-  if (containerHeight === 0) {
-    linksContainer.style.height = `${linksHeight}px`;
+const navLinksHeight = links.getBoundingClientRect().height;
+toggleBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  container.classList.toggle("show-links");
+  let navHeight = container.getBoundingClientRect().height;
+  if (navHeight == 0) {
+    container.style.height = `${navLinksHeight}px`;
   } else {
-    linksContainer.style.height = 0;
+    container.style.height = `${0}px`;
   }
 });
 
-window.addEventListener("scroll", (e) => {
-  const heightWindow = window.pageYOffset;
-  const heightNavbar = nav.getBoundingClientRect().height;
-  if (heightWindow > heightNavbar) {
+// --fix navbar--
+const nav = document.querySelector("nav");
+const navHeight = nav.getBoundingClientRect().height;
+const backHomeBtn = document.querySelector(".top-link");
+window.addEventListener("scroll", () => {
+  let scrollHeight = window.pageYOffset;
+  if (scrollHeight > navHeight) {
     nav.classList.add("fixed-nav");
   } else {
     nav.classList.remove("fixed-nav");
   }
-  if (heightWindow > 400) {
-    topLink.classList.add("show-link");
+
+  if (scrollHeight > 500) {
+    backHomeBtn.classList.add("show-link");
   } else {
-    topLink.classList.remove("show-link");
+    backHomeBtn.classList.remove("show-link");
   }
 });
 
-const titles = document.querySelectorAll(".titles");
+const scrollLinks = document.querySelectorAll(".scroll-link");
+
 scrollLinks.forEach((scrollLink) => {
   scrollLink.addEventListener("click", (e) => {
     e.preventDefault();
+
     const linkClicked = e.currentTarget.getAttribute("href").slice(1);
-    const element = document.getElementById(linkClicked);
+    const link = document.getElementById(linkClicked);
     const navHeight = nav.getBoundingClientRect().height;
-    const containerHeight = linksContainer.getBoundingClientRect().height;
+    let position = link.offsetTop - navHeight;
     const fixedNav = nav.classList.contains("fixed-nav");
-    let position = element.offsetTop - navHeight;
+    const linksContainer = container.getBoundingClientRect().height;
+
     if (!fixedNav) {
       position = position - navHeight;
     }
     if (navHeight > 82) {
-      position = position + containerHeight;
+      position = position - linksContainer;
     }
-
-    window.scrollTo({
-      left: 0,
-      top: position,
-    });
-    linksContainer.style.height = 0;
+    window.scrollTo({ top: position, left: 0 });
+    container.style.height = 0;
   });
 });
