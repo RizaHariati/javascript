@@ -1,9 +1,9 @@
 :root {
   --accent: #a05344;
-  --primary-dark: #222831;
+  --primary-dark: #293b5f;
   --primary-light: #f1f6f9;
-  --primary-medium: #393e46;
-  --secondary-medium: #fd7014;
+  --primary-medium: #47597e;
+  --secondary-medium: #962d2d;
   --secondary-light: #eeeeee;
   --gradient: linear-gradient(0deg, #f2cc8f 0%, #fefee3 35%, #f1f6f9 100%);
   --box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.445);
@@ -74,16 +74,78 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  background-color: var(--primary-dark);
-  color: var(--secondary-light);
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-.main {
+body {
+  background-color: var(--primary-light);
+  color: var(--secondary-dark);
+  text-align: center;
+  width: 100%;
+  height: 90vh;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container {
+  margin: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 3rem;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   width: 80%;
   max-width: 1000px;
-  margin: 50px auto;
+}
+
+img {
+  width: 100%;
+  height: 350px;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.subtitle span {
+  color: var(--secondary-medium);
+}
+
+.text {
+  text-align: justify;
+  font-family: var(--primary-font);
+  color: var(--primary-medium);
+}
+
+.countdown-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+}
+
+.time {
+  width: 5rem;
+  height: 5rem;
+  color: var(--primary-light);
+  background-color: #293b5f;
+  padding: 0.3rem 0rem;
+  line-height: 0.1rem;
+  text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -97,112 +159,24 @@ body {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-}
-
-.main h2 {
-  font-weight: 300;
-}
-
-.main h4 {
-  font-weight: 300;
-}
-
-.main h4 span {
-  font-weight: 500;
-  font-size: 1.1em;
-  color: var(--secondary-medium);
-}
-
-.banner {
-  width: 100%;
-  margin: 50px auto;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 2rem;
-}
-
-.image-container {
-  border-radius: var(--radius);
-  overflow: hidden;
-  height: 300px;
-  width: 100%;
-  -webkit-transition: var(--transition);
-  transition: var(--transition);
-}
-
-.image {
-  width: 100%;
-  height: 100%;
-  -webkit-transition: var(--transition);
-  transition: var(--transition);
-  -o-object-fit: cover;
-  object-fit: cover;
-  -o-object-position: center;
-  object-position: center;
-}
-
-.information {
-  background-color: var(--primary-medium);
-  border-radius: var(--radius);
-  overflow: hidden;
-  width: 100%;
-  height: auto;
-  min-height: 300px;
-}
-
-.info-links {
-  height: 3rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-}
-
-.btn {
-  width: 100%;
-  font-size: 1.1rem;
-  background-color: var(--secondary-medium);
-  border: transparent;
-  -webkit-transition: var(--transition);
-  transition: var(--transition);
-}
-
-.btn.active {
-  background-color: var(--primary-medium);
-  color: var(--primary-light);
-}
-
-.btn.active:hover {
-  background-color: var(--primary-medium);
-  color: #fefee3;
-}
-
-.btn:hover {
-  background-color: #fa8c43;
-}
-
-.info-details h4 {
-  font-size: 1.3rem;
-  font-variant: small-caps;
-}
-
-.info-details p {
-  color: var(--primary-light);
-  font-family: var(--primary-font);
-  letter-spacing: 0.1rem;
-  text-align: justify;
-  width: 90%;
-  font-weight: 100;
   margin: auto;
-  padding-bottom: 2rem;
+}
+
+.time h4 {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.time h4 span {
+  display: block;
+  font-size: 0.5em;
+  font-weight: 100;
+  text-transform: uppercase;
 }
 
 @media screen and (max-width: 900px) {
-  .banner {
+  .container {
+    margin-top: 50px;
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
   }
