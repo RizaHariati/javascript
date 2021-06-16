@@ -1,0 +1,147 @@
+:root {
+  --accent: #a05344;
+  --primary-dark: #293b5f;
+  --primary-light: #f1f6f9;
+  --primary-medium: #47597e;
+  --secondary-medium: #962d2d;
+  --secondary-light: #eeeeee;
+  --gradient: linear-gradient(0deg, #f2cc8f 0%, #fefee3 35%, #f1f6f9 100%);
+  --box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.445);
+  --primary-font: "Roboto", sans-serif;
+  --secondary-font: "Dancing Script", cursive;
+  --transition: all 0.3s linear;
+  --radius: 0.75rem;
+  --spacing: 0.25rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+  font-family: var(--primary-font);
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+h4 {
+  font-size: 0.875rem;
+}
+
+p {
+  margin-bottom: 1.25rem;
+  color: var(--primary-medium);
+}
+
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--primary-light);
+  color: var(--secondary-dark);
+  text-align: justify;
+  width: 100%;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: var(--primary-font);
+}
+
+.container {
+  margin: 50px auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  grid-gap: 3rem;
+  width: 80%;
+  max-width: 800px;
+}
+
+h1 {
+  font-weight: 400;
+  text-align: center;
+}
+
+.input {
+  height: 2rem;
+  text-align: center;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  font-family: var(--primary-font);
+  letter-spacing: var(--spacing);
+}
+
+.input .total-paragraph {
+  font-size: 1.4rem;
+  width: 3rem;
+  height: 2rem;
+  text-align: center;
+}
+
+.btn {
+  text-transform: uppercase;
+  background: var(--primary-dark);
+  color: var(--primary-light);
+  padding: 0.375rem 0.75rem;
+  letter-spacing: var(--spacing);
+  display: inline-block;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+  color: var(--primary-dark);
+  background-color: var(--primary-light);
+}
+/*# sourceMappingURL=styles.css.map */
