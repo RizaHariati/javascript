@@ -1,0 +1,129 @@
+:root {
+  --font-color: #1b1a17;
+  --primary-dark: #766161;
+  --primary-light: #f1f6f9;
+  --primary-medium: #87a7b3;
+  --secondary-medium: #cdc7be;
+  --secondary-light: #f3f4ed;
+  --gradient: linear-gradient(0deg, #f2cc8f 0%, #fefee3 35%, #f1f6f9 100%);
+  --box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.527);
+  --primary-font: "Roboto", sans-serif;
+  --secondary-font: "Dancing Script", cursive;
+  --transition: all 0.5s ease-in-out;
+  --radius: 1.5rem;
+  --spacing: 0.25rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+  font-family: var(--primary-font);
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+h4 {
+  font-size: 0.875rem;
+}
+
+p {
+  font-family: var(--primary-font);
+}
+
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  color: var(--primary-dark);
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(#33343554),
+      to(#20202017)
+    ),
+    url("../img/dog-3952503_1920.jpg");
+  background: linear-gradient(#33343554, #20202017),
+    url("../img/dog-3952503_1920.jpg");
+  background-position: center;
+  background-size: cover;
+  z-index: -1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
+}
+
+.loading-text {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  color: var(--primary-light);
+  font-size: 7rem;
+  opacity: 0.7;
+}
+/*# sourceMappingURL=styles.css.map */
