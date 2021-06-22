@@ -1,15 +1,16 @@
 :root {
-  --font-color: #1b1a17;
-  --primary-dark: #766161;
+  --font-color: #f1f6f9;
+  --primary-dark: #22577a;
   --primary-light: #f1f6f9;
-  --primary-medium: #87a7b3;
-  --secondary-medium: #cdc7be;
+  --primary-medium: #38a3a5;
+  --secondary-medium: #57cc99;
+  --secondary-dark: #1b1a17;
   --secondary-light: #f3f4ed;
   --gradient: linear-gradient(0deg, #f2cc8f 0%, #fefee3 35%, #f1f6f9 100%);
   --box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.527);
   --primary-font: "Roboto", sans-serif;
   --secondary-font: "Dancing Script", cursive;
-  --transition: all 0.5s ease-in-out;
+  --transition: all 0.3s ease-in-out;
   --radius: 1.5rem;
   --spacing: 0.25rem;
 }
@@ -86,44 +87,107 @@ body {
   color: var(--primary-dark);
 }
 
-.container {
+.main-container {
   width: 100%;
-  height: 100vh;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.bali {
+  width: 150%;
   background: -webkit-gradient(
       linear,
       left top,
       left bottom,
-      from(#33343554),
-      to(#20202017)
+      color-stop(20%, #57cc995b),
+      to(#1b1a17)
     ),
-    url("../img/dog-3952503_1920.jpg");
-  background: linear-gradient(#33343554, #20202017),
-    url("../img/dog-3952503_1920.jpg");
-  background-position: center;
-  background-size: cover;
-  z-index: -1;
+    url("../img/the-village-1822441_1920.jpg") center/cover no-repeat;
+  background: linear-gradient(#57cc995b 20%, #1b1a17 100%),
+    url("../img/the-village-1822441_1920.jpg") center/cover no-repeat;
+}
+
+.lombok {
+  width: 50%;
+  background: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(#38a3a56c),
+      to(#1b1a17b9)
+    ),
+    url("../img/volcano-5734404_1920.jpg") center/cover no-repeat;
+  background: linear-gradient(#38a3a56c, #1b1a17b9),
+    url("../img/volcano-5734404_1920.jpg") center/cover no-repeat;
+}
+
+.page {
+  position: relative;
+  width: 50vw;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  -webkit-filter: blur(5px);
-  filter: blur(5px);
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
 }
 
-.loading-text {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  z-index: 2;
+.page::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.178);
+  position: absolute;
+}
+
+h1 {
   color: var(--primary-light);
-  font-size: 7rem;
-  opacity: 0.7;
+  font-family: var(--secondary-font);
+  font-size: 6rem;
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.61);
+  z-index: 2;
+}
+
+.btn {
+  z-index: 2;
+  background-color: transparent;
+  font-family: var(--primary-font);
+  font-size: 1.2rem;
+  color: var(--font-color);
+  margin-top: 2rem;
+  padding: 0.5rem 1.5rem;
+  border: 2px solid var(--primary-light);
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.btn:hover {
+  background-color: #1b1a17a8;
+  -webkit-box-shadow: var(--box-shadow);
+  box-shadow: var(--box-shadow);
+}
+
+@media screen and (max-width: 800px) {
+  h1 {
+    font-size: 4rem;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
