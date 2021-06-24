@@ -1,0 +1,154 @@
+:root {
+  --font-color: #334443;
+  --primary-dark: #343a40;
+  --primary-light: #fdfaf6;
+  --primary-medium: #faf1e6;
+  --secondary-medium: #ffc074;
+  --secondary-dark: #463f3a;
+  --secondary-light: #f3f4ed;
+  --gradient: linear-gradient(0deg, #f2cc8f 0%, #fefee3 35%, #f1f6f9 100%);
+  --box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.527);
+  --primary-font: "Roboto", sans-serif;
+  --secondary-font: "Dancing Script", cursive;
+  --transition: all 0.3s ease-in-out;
+  --radius: 0.5rem;
+  --spacing: 0.25rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+  font-family: var(--primary-font);
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+h4 {
+  font-size: 0.875rem;
+}
+
+p {
+  font-family: var(--primary-font);
+}
+
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background: var(--primary-medium);
+  color: var(--primary-dark);
+  font-family: var(--primary-font);
+  font-weight: 300;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.quiz-container {
+  width: 90%;
+  max-width: 400px;
+  height: 250px;
+  padding: 2rem;
+  line-height: 1.5rem;
+  border-radius: var(--radius);
+  -webkit-box-shadow: var(--box-shadow);
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+  background-color: var(--primary-light);
+  position: relative;
+}
+
+.btn {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  height: 2rem;
+  font-size: 1.2rem;
+  border: transparent;
+  background-color: var(--secondary-medium);
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  color: var(--primary-light);
+}
+
+.btn:hover {
+  background-color: #ffc0747c;
+}
+
+.btn:focus {
+  background-color: var(--secondary-medium);
+}
+
+li {
+  font-size: 0.7rem;
+  list-style: none;
+}
+
+li input {
+  font-size: 0.7rem;
+}
+
+.question {
+  font-size: 0.8rem;
+}
+/*# sourceMappingURL=styles.css.map */
