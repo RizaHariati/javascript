@@ -163,9 +163,13 @@ p {
   background-position: center;
   background-size: cover;
 }
-
+h3 {
+  white-space: nowrap;
+  font-size: 1.4rem;
+  letter-spacing: 0.1rem;
+}
 .animated {
-  background: linear-gradient(100deg, #f2cc8f, white, #f2cc8f);
+  background: linear-gradient(100deg, #ecd7e8, white, #ecd7e8);
   color: transparent;
   -webkit-animation: 1.5s movingBG linear infinite;
   animation: 1.5s movingBG linear infinite;

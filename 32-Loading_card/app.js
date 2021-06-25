@@ -9,7 +9,7 @@ function loadingImages() {
     removeAnimated();
     imageBG.style.background = `url("./img/tulips-4072214_640.jpg") center/cover no-repeat`;
     photo.style.background = `url("../img/girl1.jpg")center/cover no-repeat`;
-  }, 2000);
+  }, 1000);
 }
 
 function removeAnimated() {
